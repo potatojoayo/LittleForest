@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    android:layout_marginLeft="0dp"
+
+    android:background="@drawable/top_line"
+    android:focusableInTouchMode="true"
+    >
+
+
+
+
+
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:id="@+id/page"
+        android:orientation="horizontal"
+        android:weightSum="20"
+        android:layout_marginLeft="0dp"
+
+        >
+
+        <de.hdodenhof.circleimageview.CircleImageView
+           android:layout_alignParentLeft="true"
+            android:layout_width="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_height="match_parent"
+            android:id="@+id/pageProfilePhoto"
+            android:layout_centerVertical="true"
+            />
+        <TextView
+            android:layout_toRightOf="@id/pageProfilePhoto"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_height="15dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/background"
+            android:id="@+id/pageName"
+            android:textSize="14sp"
+            android:fontFamily="@font/nixgonfonts_b"
+            android:gravity="center_vertical"
+            android:text="pagename"
+            />
+        <TextView
+            android:layout_marginTop="0dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:id="@+id/province"
+            android:layout_toRightOf="@id/pageProfilePhoto"
+            android:layout_below="@id/pageName"
+            android:text="지역"
+            android:fontFamily="@font/nixgonfonts_b"
+            android:textSize="11sp"
+            android:gravity="center_vertical"
+
+            />
+
+        <TextView
+            android:layout_marginTop="0dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:layout_toRightOf="@+id/province"
+            android:layout_below="@+id/pageName"
+            android:id="@+id/type"
+            android:fontFamily="@font/nixgonfonts_b"
+            android:text="종류"
+            android:gravity="center_vertical"
+            android:textSize="11sp"
+            />
+
+
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/postImage"
+        android:layout_below="@id/page"
+        android:background="@drawable/top_line"
+        android:layout_marginVertical="10dp"
+        android:adjustViewBounds="true"
+        />
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="29dp"
+        android:layout_below="@id/postImage"
+        android:id="@+id/postInteraction"
+        android:weightSum="20"
+        android:layout_marginLeft="9dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        >
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="27dp"
+            android:layout_weight="1.7"
+            android:id="@+id/likeBtn"
+            android:src="@drawable/tree"
+            />
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_weight="2"
+            android:id="@+id/commentBtn"
+            android:src="@drawable/comment_solid"
+            android:visibility="gone"
+
+            />
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="28dp"
+            android:layout_weight="1.7"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/compass"
+            android:src="@drawable/ic_compass_regular"
+
+            />
+        <ImageView
+            android:layout_marginLeft="15dp"
+            android:layout_width="0dp"
+            android:layout_height="26dp"
+            android:layout_weight="1.7"
+            android:src="@drawable/ic_share_square_regular"
+            android:visibility="invisible"
+
+            />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="12"
+            />
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:id="@+id/toCollectionBtn"
+            />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/userInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/postInteraction"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/nixgonfonts_n"
+        android:orientation="horizontal"
+        android:text="username"
+        android:weightSum="20"
+        android:layout_marginBottom="10dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/userProfilePhoto"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="2"
+
+
+            />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="15">
+
+            <TextView
+                android:id="@+id/userName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/background"
+                android:layout_alignParentTop="true"
+                android:fontFamily="@font/nixgonfonts_b"
+                android:text="username"
+                android:textSize="16sp"
+
+
+                />
+
+            <TextView
+                android:id="@+id/postDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/userName"
+                android:fontFamily="@font/nixgonfonts_b"
+                android:text="description"
+                android:textSize="15sp"
+
+                />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/userOption"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/menu"
+            android:visibility="invisible" />
+
+
+    </LinearLayout>
+
+
+
+
+
+    <TextView
+        android:layout_marginLeft="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nixgonfonts_b"
+        android:id="@+id/countLikes"
+        android:text="좋아요 10개"
+        android:layout_marginBottom="5dp"
+        android:layout_below="@id/userInfo"
+        android:textSize="13sp"
+        />
+
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_height="wrap_content"
+        android:text="댓글 20개 모두 보기"
+        android:layout_below="@+id/countLikes"
+        android:id="@+id/showAllComents"
+        android:textColor="@color/more_gray"
+        android:fontFamily="@font/nixgonfonts_b"
+        android:layout_marginBottom="10dp"
+        android:textSize="13sp"
+        />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/showAllComents"
+        android:id="@+id/comments"
+
+
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:id="@+id/mainComentContainer"
+
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="name"
+                android:fontFamily="@font/nixgonfonts_b"
+                android:id="@+id/commentUserName"
+                android:textColor="@color/background"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:fontFamily="@font/nixgonfonts_b"
+                android:id="@+id/commentContents"
+                android:text="contents"
+                android:paddingLeft="10dp"
+                android:layout_toRightOf="@+id/commentUserName"
+                />
+
+
+
+
+        </RelativeLayout>
+
+
+
+
+    </RelativeLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginTop="1dp"
+        android:id="@+id/writeCommentContainer"
+        android:layout_below="@+id/comments"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:weightSum="20"
+        >
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="0dp"
+            android:layout_height="22dp"
+            android:layout_marginLeft="12dp"
+            android:id="@+id/myProfilePhoto"
+            android:layout_weight="1.5"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:layout_weight="15"
+            android:fontFamily="@font/nixgonfonts_b"
+            android:id="@+id/writeComment"
+            android:textCursorDrawable="@drawable/cursor_default_color"
+            android:background="@drawable/button_shape"
+            android:textSize="15sp"
+            android:textColor="@color/default_text"
+            android:text="댓글 달기..."
+
+
+            />
+
+
+
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="7dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/postedDate"
+        android:fontFamily="@font/nixgonfonts_b"
+        android:textSize="10sp"
+        android:layout_below="@id/writeCommentContainer"
+        android:text="3일 전"
+        />
+
+
+
+</RelativeLayout>

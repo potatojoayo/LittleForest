@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="100dp">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:id="@+id/viewHolder_video"
+        android:fontFamily="@font/nixgonfonts_b"
+        android:gravity="right"
+        android:paddingTop="5dp"
+        android:paddingRight="5dp"
+        android:textColor="@color/background"
+       />
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/layoutSelect_video"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#65FFFFFF"
+        android:visibility="invisible"
+        >
+
+<!--        <ImageView-->
+<!--            android:layout_width="40dp"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:background="@drawable/check"-->
+<!--            android:layout_centerInParent="true"-->
+<!--            />-->
+
+    </RelativeLayout>
+
+</RelativeLayout>

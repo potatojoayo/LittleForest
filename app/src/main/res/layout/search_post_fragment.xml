@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="150dp"
+        android:fontFamily="@font/nixgonfonts_b"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="사진을 공유하면 프로필에 표시됩니다.\n \n 첫 번째 사진을 공유해보세요!"
+        android:textColor="@color/background"
+        android:textSize="20sp"
+        android:visibility="gone"
+        android:id="@+id/tvWhenEmptyPost"
+        />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/swipeLayout"
+     >
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/recyclerview"
+            />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</RelativeLayout>

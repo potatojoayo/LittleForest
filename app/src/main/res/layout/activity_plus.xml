@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".plus.PlusActivity">
+
+
+
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/plusNavigaiion"
+        android:id="@+id/plusFrame"
+
+       />
+
+
+
+
+
+
+
+
+
+    <LinearLayout
+        android:id="@+id/plusNavigaiion"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:weightSum="3"
+        android:gravity="center_vertical"
+        >
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:id="@+id/gallery"
+            android:gravity="center"
+            android:textColor="@color/background"
+            android:text="갤러리"
+            android:fontFamily="@font/nixgonfonts_b"
+            android:textSize="20sp"
+            android:layout_weight="1"
+
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:id="@+id/photo"
+            android:text="사진"
+            android:textColor="@color/navi"
+            android:gravity="center"
+            android:fontFamily="@font/nixgonfonts_b"
+            android:textSize="20sp"
+            android:layout_weight="1"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:id="@+id/video"
+            android:gravity="center"
+            android:text="비디오"
+            android:textColor="@color/navi"
+            android:fontFamily="@font/nixgonfonts_b"
+            android:textSize="20sp"
+            android:layout_weight="1"
+            />
+
+
+
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

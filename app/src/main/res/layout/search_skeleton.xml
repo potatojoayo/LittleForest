@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.benhan.bluegreen.utill.SquareRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:id="@+id/postImage"
+        android:background="@color/light_transparent"
+        />
+
+</com.benhan.bluegreen.utill.SquareRelativeLayout>

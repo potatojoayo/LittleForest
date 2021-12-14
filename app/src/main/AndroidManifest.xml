@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.benhan.bluegreen">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature android:name="android.hardware.location.gps" />
+
+    <application
+        android:name=".utill.MyApplication"
+        android:allowBackup="true"
+        android:hardwareAccelerated="false"
+        android:icon="@drawable/tree_selected"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@drawable/tree_selected"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".register.RegisterAgreement"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"></activity>
+        <activity android:name=".place.PhotoUploadToPageActivity"
+            android:windowSoftInputMode="adjustResize"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+        <activity
+            android:name=".user.OtherUser"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".utill.ImageCropper"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".place.PlacePage"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".fullpost.FullPost"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:name=".plus.PlusGalleryActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".plus.PhotoUploadActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".comment.Comment"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Base.Theme.AppCompat"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".user.ProfilePhotoPicker"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".user.ProfileUpdateActivity"
+            android:fitsSystemWindows="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".plus.PlusActivity"
+            android:fitsSystemWindows="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".HomeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".register.Register4"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".register.Register3"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".register.Register2"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".register.Register1"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity android:name=".SplashActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".login.LoginActivity2"
+            android:fitsSystemWindows="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".login.LoginActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".login.MainActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+    </application>
+
+</manifest>

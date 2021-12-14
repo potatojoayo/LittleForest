@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".register.Register4"
+    android:background="@color/background">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        android:gravity="center"
+
+        >
+
+
+
+
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="8.5"
+            >
+
+    <TextView
+        android:id="@+id/askNickName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/nixgonfonts_b"
+        android:text="닉네임을 만들어주세요"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:textSize="30dp" />
+
+    <TextView
+        android:id="@+id/isNotPublic"
+        android:layout_below="@id/askNickName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/nixgonfonts_b"
+        android:text="언제든지 변경할 수 있습니다!"
+        android:gravity="center"
+        android:textColor="#A3FFFFFF"
+        android:textSize="15dp" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:id="@+id/etNickNameRegisterContainer"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/isNotPublic"
+                android:layout_marginTop="40dp"
+
+                >
+
+
+                <EditText
+                    android:id="@+id/etNickNameRegister"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/button_shape"
+                    android:layout_centerHorizontal="true"
+                    android:paddingLeft="15dp"
+                    android:hint="닉네임"
+                    android:inputType="textEmailAddress"
+                    android:fontFamily="@font/nixgonfonts_b"
+                    android:gravity="center_vertical"
+                    android:textSize="15dp"
+                    android:textColor="@color/background"
+                    android:textCursorDrawable="@drawable/cursor_color"
+
+                    >
+                    <requestFocus/>
+                </EditText>
+
+
+                <ImageView
+                    android:id="@+id/check"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/check"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    />
+
+                <ImageView
+                    android:id="@+id/warning"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/warning"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    />
+
+
+
+
+
+            </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnRegisterRegister"
+        android:background="@drawable/button_shape"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_below="@+id/etNickNameRegisterContainer"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="가입하기"
+        android:fontFamily="@font/nixgonfonts_b"
+        android:textColor="@color/background"
+
+
+        />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:id="@+id/caution"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nixgonfonts_b"
+                android:textColor="@color/white"
+                android:layout_below="@+id/btnRegisterRegister"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:text="가입하기를 누르시면 가입 약관에 동의를 한다는 뜻입니다"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nixgonfonts_b"
+                android:textColor="@color/white"
+                android:layout_below="@+id/caution"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:id="@+id/showAgreement"
+                android:text="개인정보처리방침 보기"
+                />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

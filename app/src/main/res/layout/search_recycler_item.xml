@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:id="@+id/searchItem">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_marginLeft="20dp"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/tree"
+        android:layout_centerVertical="true"
+        android:id="@+id/photo"
+        />
+
+    <TextView
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_toRightOf="@+id/photo"
+        android:id="@+id/name"
+        android:textColor="@color/background"
+        android:fontFamily="@font/nixgonfonts_b"
+        android:text="name"
+        android:layout_alignParentTop="true"
+        android:gravity="center_vertical"
+        android:textSize="17sp"
+        />
+
+    <TextView
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/province"
+        android:layout_toRightOf="@id/photo"
+        android:layout_below="@id/name"
+        android:text="지역"
+        android:fontFamily="@font/nixgonfonts_b"
+        android:textSize="13sp"
+        android:gravity="center_vertical"
+
+        />
+
+    <TextView
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/province"
+        android:layout_below="@+id/name"
+        android:id="@+id/type"
+        android:fontFamily="@font/nixgonfonts_b"
+        android:text="종류"
+        android:gravity="center_vertical"
+        android:textSize="13sp"
+        />
+
+    <TextView
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/type"
+        android:layout_below="@+id/name"
+        android:id="@+id/distance"
+        android:fontFamily="@font/nixgonfonts_b"
+        android:text="거리"
+        android:gravity="center_vertical"
+        android:textSize="13sp"
+        />
+
+    <RelativeLayout
+        android:id="@+id/layoutSelect"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#607CB342"
+        android:visibility="invisible"
+        >
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

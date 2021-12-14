@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".register.Register3"
+    android:background="@color/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        android:gravity="center"
+
+        >
+
+
+
+
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="8.5"
+            >
+
+
+
+    <TextView
+        android:id="@+id/askPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/nixgonfonts_b"
+        android:text="비밀번호를 만들어주세요"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:textSize="30dp" />
+
+    <TextView
+        android:id="@+id/isNotPublic"
+        android:layout_below="@id/askPassword"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/nixgonfonts_b"
+        android:text="영문, 숫자, 특수문자를 포함하여 \n6자리 이상으로 만들어주세요."
+        android:textColor="#A3FFFFFF"
+        android:textSize="15dp" />
+
+    <EditText
+        android:id="@+id/etPasswordRegister"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/isNotPublic"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="@drawable/button_shape"
+        android:layout_centerHorizontal="true"
+        android:paddingLeft="15dp"
+        android:hint="비밀번호"
+        android:fontFamily="@font/nixgonfonts_b"
+        android:gravity="center_vertical"
+        android:textSize="15dp"
+        android:textColor="@color/background"
+        android:inputType="textPassword"
+        android:textCursorDrawable="@drawable/cursor_color"
+
+        />
+
+    <Button
+        android:id="@+id/btnNext"
+        android:background="@drawable/button_shape_disable"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_below="@+id/etPasswordRegister"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="다음"
+        android:fontFamily="@font/nixgonfonts_b"
+        android:textColor="@color/disabled"
+
+
+        />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

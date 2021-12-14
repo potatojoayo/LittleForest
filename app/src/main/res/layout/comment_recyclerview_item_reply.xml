@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+
+    <RelativeLayout
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/description"
+        android:layout_below="@id/upperBar"
+        >
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="45dp"
+            android:id="@+id/profilePhoto"
+            />
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/profilePhoto"
+            android:layout_alignParentTop="true"
+            android:fontFamily="@font/nixgonfonts_b"
+            android:text="name"
+            android:textSize="12sp"
+            android:textColor="@color/background"
+            android:id="@+id/posterName"
+            />
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@id/posterName"
+            android:fontFamily="@font/nixgonfonts_b"
+            android:text="contents"
+            android:id="@+id/descriptionContents"
+            android:textSize="12sp"
+            />
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/postedDate"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/nixgonfonts_b"
+            android:text="2020.06.11 13:23"
+            android:textSize="10sp"
+            android:layout_toRightOf="@id/profilePhoto"
+            android:layout_below="@+id/descriptionContents"
+            />
+
+        <TextView
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/commentLikes"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/nixgonfonts_b"
+            android:text="좋아요 3개"
+            android:textSize="10sp"
+
+            android:layout_toRightOf="@id/postedDate"
+            android:layout_below="@+id/descriptionContents"
+            />
+
+        <TextView
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/reply"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/nixgonfonts_b"
+            android:text="답글달기"
+            android:textSize="10sp"
+            android:layout_toRightOf="@id/commentLikes"
+            android:layout_below="@+id/descriptionContents"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/delete_comment"
+            android:fontFamily="@font/nixgonfonts_b"
+            android:layout_toEndOf="@id/reply"
+            android:layout_below="@id/descriptionContents"
+            android:text="댓글 삭제"
+            android:layout_marginTop="5dp"
+            android:textSize="10sp"
+            android:layout_marginLeft="20dp"
+            />
+
+
+        <ImageView
+            android:layout_marginTop="5dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/tree"
+            android:id="@+id/btnLike"
+
+            android:layout_alignParentRight="true"
+            />
+
+
+    </RelativeLayout>
+</LinearLayout>

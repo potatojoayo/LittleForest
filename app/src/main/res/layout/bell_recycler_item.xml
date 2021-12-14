@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+
+    <RelativeLayout
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/description"
+        android:layout_below="@id/upperBar"
+        >
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/profilePhoto"
+            />
+
+        <TextView
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/profilePhoto"
+            android:layout_alignParentTop="true"
+            android:fontFamily="@font/nixgonfonts_b"
+            android:text="name"
+            android:textColor="@color/background"
+            android:textSize="15sp"
+            android:id="@+id/posterName"
+            />
+
+        <TextView
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@id/posterName"
+            android:fontFamily="@font/nixgonfonts_b"
+            android:text="님이 회원님의 사진을 좋아합니다."
+            android:id="@+id/descriptionContents"
+            android:textSize="13sp"
+            />
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/postedDate"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/nixgonfonts_b"
+            android:text="2020.06.11 13:23"
+            android:textSize="11sp"
+            android:layout_toRightOf="@id/profilePhoto"
+            android:layout_below="@+id/descriptionContents"
+            />
+
+
+
+
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/tree"
+            android:layout_centerVertical="true"
+            android:id="@+id/postImage"
+            android:scaleType="centerCrop"
+
+            android:layout_alignParentRight="true"
+            />
+
+
+    </RelativeLayout>
+</LinearLayout>

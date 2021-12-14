@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".register.RegisterAgreement"
+    android:background="@color/white">
+
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="25dp"
+        android:src="@drawable/back_button"
+        android:id="@+id/backback"
+        android:layout_toLeftOf="@id/title"
+        android:layout_marginTop="33dp"
+        android:layout_marginRight="35dp"/>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/nixgonfonts_b"
+       android:layout_centerHorizontal="true"
+        android:text="개인정보처리 방침 약관 "
+        android:gravity="center"
+        android:textColor="@color/background"
+        android:textSize="25dp" />
+
+    <TextView
+        android:layout_centerHorizontal="true"
+        android:layout_width="350dp"
+        android:layout_height="500dp"
+        android:padding="20dp"
+        android:id="@+id/textView"
+        android:layout_below="@id/title"
+        android:layout_marginTop="50dp"
+        android:scrollbars="vertical"
+
+        android:textColor="@color/default_text"
+        android:fontFamily="@font/nixgonfonts_b"
+        android:background="@drawable/button_shape"
+
+        />
+
+
+
+
+</RelativeLayout>

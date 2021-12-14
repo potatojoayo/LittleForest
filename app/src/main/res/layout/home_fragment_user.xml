@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/userFragmentLayout"
+    tools:context=".user.FragmentUser">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_weight="1.0"
+        android:id="@+id/profileUpperBar"
+        android:layout_gravity="center_vertical"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/nixgonfonts_b"
+            android:text="username"
+            android:textColor="@color/background"
+            android:textSize="25sp"
+            android:id="@+id/profile_username"
+            />
+
+        <TextView
+
+
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:fontFamily="@font/nixgonfonts_b"
+            android:gravity="center_vertical"
+            android:text="로그아웃"
+            android:textColor="@color/background"
+            android:textSize="15sp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/logout"
+            />
+
+
+
+
+
+
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/profileOverView"
+        android:orientation="horizontal"
+        android:weightSum="20"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/profileUpperBar"
+        >
+
+        <de.hdodenhof.circleimageview.CircleImageView
+
+            android:layout_marginLeft="20dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/user_circle"
+            android:id="@+id/placePhoto"
+            android:background="@color/white"
+            android:layout_alignParentLeft="true"
+
+
+            />
+
+        <RelativeLayout
+            android:layout_width="90dp"
+            android:layout_marginLeft="20dp"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/placePhoto"
+            android:id="@+id/postInfo"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="15dp"
+
+
+
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nixgonfonts_b"
+                android:text="0"
+                android:textColor="@color/background"
+                android:id="@+id/postNumber"
+                android:textSize="20sp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nixgonfonts_b"
+                android:textSize="15sp"
+                android:layout_centerHorizontal="true"
+                android:text="게시물"
+                android:textColor="@color/background"
+                android:id="@+id/postNumberIndex"
+                android:layout_below="@id/postNumber"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/postInfo"
+            android:id="@+id/followingInfo"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="15dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nixgonfonts_b"
+                android:textColor="@color/background"
+                android:id="@+id/followerNumber"
+                android:text="0"
+                android:textSize="20sp"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentTop="true"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nixgonfonts_b"
+                android:textSize="15sp"
+                android:layout_centerHorizontal="true"
+                android:text="팔로잉"
+                android:textColor="@color/background"
+                android:id="@+id/pageNumberIndex"
+                android:layout_below="@id/followerNumber"
+                />
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/followingInfo"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="15dp"
+
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:fontFamily="@font/nixgonfonts_b"
+                android:textColor="@color/background"
+                android:id="@+id/likeNumber"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentTop="true"
+                android:textSize="20sp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nixgonfonts_b"
+                android:textSize="15sp"
+                android:layout_centerHorizontal="true"
+                android:text="좋아요"
+                android:textColor="@color/background"
+                android:id="@+id/follwingNumberIndex"
+                android:layout_below="@id/likeNumber"
+                />
+
+        </RelativeLayout>
+
+
+
+
+
+        <Button
+            android:layout_width="230dp"
+            android:layout_height="30dp"
+            android:layout_weight="18"
+            android:background="@drawable/button_shape_green"
+            android:fontFamily="@font/nixgonfonts_b"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:id="@+id/btnProfileUpdate"
+            android:text="프로필 수정"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="20dp"
+
+            />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginStart="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/userProfileIntroduce"
+        android:layout_below="@id/profileOverView"
+        android:layout_marginTop="10dp"
+        >
+
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nixgonfonts_b"
+            android:textColor="@color/background"
+            android:text="actualname"
+            android:id="@+id/actualName"
+            android:textSize="15sp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nixgonfonts_b"
+            android:textColor="@color/navi"
+            android:text="프로필을 완성하세요"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="75dp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/tvUnfinishedInfo"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nixgonfonts_b"
+            android:textColor="@color/default_text"
+            android:id="@+id/userIntroduction"
+            android:layout_below="@+id/actualName"
+            android:text="introduction"
+            android:textSize="13sp"
+            />
+
+
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginHorizontal="1dp"
+        android:layout_below="@id/userProfileIntroduce"
+        android:id="@+id/searchTab"
+        android:orientation="horizontal"
+        android:isScrollContainer="false"
+        android:weightSum="2"
+        >
+
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+
+            android:id="@+id/layoutGrid"
+            android:background="@drawable/button_shape_stroke"
+            >
+
+            <ImageView
+                android:layout_centerInParent="true"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/grid_green"
+                android:id="@+id/ivGrid"
+                />
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/layoutLocation"
+            android:background="@drawable/button_shape_green"
+            >
+
+            <ImageView
+                android:layout_centerInParent="true"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/location_white"
+                android:id="@+id/ivLocation"
+                />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+        <FrameLayout
+            android:layout_marginTop="1dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/searchTab"
+            android:id="@+id/frame"
+            />
+
+
+
+
+
+
+
+</RelativeLayout>

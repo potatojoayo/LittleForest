@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".place.PhotoUploadToPageActivity"
+    android:focusableInTouchMode="true">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/pageInfo"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1.0"
+            android:id="@+id/profileUpperBar"
+            android:layout_gravity="center_vertical"
+            >
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/back_button"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/ivBack"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/nixgonfonts_b"
+                android:text=""
+                android:textColor="@color/background"
+                android:textSize="25sp"
+                android:id="@+id/topPlaceName"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:fontFamily="@font/nixgonfonts_b"
+                android:text="게시하기"
+                android:textColor="@color/background"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:layout_marginRight="10dp"
+                android:textSize="16sp"
+                android:id="@+id/post"
+                />
+
+
+
+
+
+
+
+
+        </RelativeLayout>
+
+
+        <com.daimajia.numberprogressbar.NumberProgressBar
+            android:id="@+id/number_progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/profileUpperBar"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone"
+
+            app:progress_reached_color="@color/background"
+            app:progress_unreached_color="@color/navi"
+            app:progress_unreached_bar_height="1.5dp"
+            app:progress_reached_bar_height="2dp"
+
+            app:progress_text_size="15sp"
+            app:progress_text_color="@color/background"
+            app:progress_text_offset="1dp"
+            app:progress_text_visibility="visible"
+
+            app:progress_max="100"
+            app:progress_current="0"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_weight="3"
+            android:id="@+id/profileOverView"
+            android:orientation="horizontal"
+            android:weightSum="20"
+            android:gravity="center_vertical"
+            android:layout_below="@+id/profileUpperBar"
+            >
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="7"
+                android:src="@drawable/user_circle"
+                android:id="@+id/placePhoto"
+                android:background="@color/white"
+                />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+
+
+                >
+
+                <TextView
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nixgonfonts_b"
+                    android:text=""
+                    android:textColor="@color/background"
+                    android:id="@+id/postNumber"
+                    android:textSize="20sp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nixgonfonts_b"
+                    android:textSize="15sp"
+                    android:layout_centerHorizontal="true"
+                    android:text="게시물"
+                    android:textColor="@color/background"
+                    android:id="@+id/postNumberIndex"
+                    android:layout_below="@id/postNumber"
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+
+
+                >
+
+                <TextView
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nixgonfonts_b"
+                    android:text=""
+                    android:textColor="@color/background"
+                    android:id="@+id/followerNumber"
+                    android:textSize="20sp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nixgonfonts_b"
+                    android:textSize="15sp"
+                    android:layout_centerHorizontal="true"
+                    android:text="팔로워"
+                    android:textColor="@color/background"
+                    android:id="@+id/pageNumberIndex"
+                    android:layout_below="@id/followerNumber"
+                    />
+
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+
+
+                >
+
+                <TextView
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nixgonfonts_b"
+                    android:text=""
+                    android:textColor="@color/background"
+                    android:id="@+id/likeNumber"
+                    android:textSize="20sp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nixgonfonts_b"
+                    android:textSize="15sp"
+                    android:layout_centerHorizontal="true"
+                    android:text="좋아요"
+                    android:textColor="@color/background"
+                    android:id="@+id/follwingNumberIndex"
+                    android:layout_below="@id/likeNumber"
+                    />
+
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_marginLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/userProfileIntroduce"
+            android:layout_below="@id/profileOverView"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nixgonfonts_b"
+                android:textColor="@color/background"
+                android:text=""
+                android:id="@+id/placeName"
+                android:textSize="15sp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nixgonfonts_b"
+                android:textColor="@color/default_text"
+                android:id="@+id/placeProvince"
+                android:layout_below="@+id/placeName"
+                android:text=""
+                android:textSize="13sp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nixgonfonts_b"
+                android:textColor="@color/default_text"
+                android:id="@+id/placeType"
+                android:layout_below="@+id/placeName"
+                android:text=""
+                android:layout_toRightOf="@id/placeProvince"
+                android:textSize="13sp"
+                android:layout_marginLeft="10dp"
+                />
+
+
+
+        </RelativeLayout>
+
+
+
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/selectedImageUpload"
+            android:layout_below="@id/userProfileIntroduce"
+            android:background="@drawable/top_line"
+            android:layout_marginLeft="0dp"
+            android:layout_marginVertical="10dp"
+            android:adjustViewBounds="true"
+            android:minHeight="200dp"
+            android:maxHeight="400dp"
+            />
+
+
+        <LinearLayout
+            android:id="@+id/userInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/selectedImageUpload"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/nixgonfonts_n"
+            android:orientation="horizontal"
+            android:weightSum="20"
+            android:layout_marginBottom="10dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/userProfilePhoto"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="2"
+
+
+
+            />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="15">
+
+            <TextView
+                android:id="@+id/userName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/background"
+                android:layout_alignParentTop="true"
+                android:fontFamily="@font/nixgonfonts_b"
+                android:text=""
+                android:textSize="16sp"
+
+
+                />
+
+            <TextView
+                android:id="@+id/postDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/userName"
+                android:fontFamily="@font/nixgonfonts_b"
+                android:inputType="textNoSuggestions"
+                android:background="@drawable/button_shape"
+                android:textColor="@color/default_text"
+                android:hint="문구 입력..."
+                android:textSize="18sp"
+
+                />
+        </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:id="@+id/writeCommentContainer"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/top_line"
+        android:weightSum="20"
+        android:visibility="gone"
+        >
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="12dp"
+        android:id="@+id/myProfilePhoto"
+        android:layout_weight="1.5"
+        android:background="@color/white"
+        />
+    <com.benhan.bluegreen.utill.CommentEditText
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:layout_weight="15"
+        android:fontFamily="@font/nixgonfonts_b"
+        android:id="@+id/writeComment"
+        android:textCursorDrawable="@drawable/cursor_default_color"
+        android:background="@drawable/top_line"
+        android:textSize="20sp"
+        android:inputType="textNoSuggestions"
+        android:textColor="@color/default_text"
+        android:hint="댓글 달기..."
+        android:imeOptions="actionDone"
+
+        />
+
+    </LinearLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

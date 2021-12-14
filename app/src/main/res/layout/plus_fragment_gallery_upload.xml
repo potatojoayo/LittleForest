@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:focusableInTouchMode="true"
+    >
+
+
+
+
+    <LinearLayout
+        android:id="@+id/upperBar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:background="@drawable/bottom_line"
+        android:weightSum="10"
+        android:gravity="center_vertical"
+
+        >
+
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:layout_weight="2"
+            android:src="@drawable/back_button"
+            />
+
+
+
+
+
+        <TextView
+
+            android:id="@+id/newPost"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+
+            android:layout_weight="6.0"
+
+            android:gravity="center"
+            android:text="새 게시물"
+            android:textSize="20sp"
+            android:fontFamily="@font/nixgonfonts_b"
+            android:textColor="@color/background"
+            android:background="@drawable/bottom_line"
+
+            />
+
+
+
+
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="2.0"
+            android:gravity="center"
+            android:text="공유"
+            android:textSize="20sp"
+            android:id="@+id/post"
+            android:fontFamily="@font/nixgonfonts_b"
+            android:textColor="@color/background"
+            android:paddingEnd="5dp"
+            />
+
+
+
+
+    </LinearLayout>
+
+    <com.daimajia.numberprogressbar.NumberProgressBar
+        android:id="@+id/number_progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/upperBar"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+
+        app:progress_reached_color="@color/background"
+        app:progress_unreached_color="@color/navi"
+        app:progress_unreached_bar_height="1.5dp"
+        app:progress_reached_bar_height="2dp"
+
+        app:progress_text_size="15sp"
+        app:progress_text_color="@color/background"
+        app:progress_text_offset="1dp"
+        app:progress_text_visibility="visible"
+
+        app:progress_max="100"
+        app:progress_current="0"
+        />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_below="@+id/number_progress_bar"
+        android:layout_height="100dp"
+
+        android:id="@+id/selectedImageUpload"
+
+        />
+
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+
+        android:id="@+id/descRiptionContainer"
+        android:layout_below="@+id/number_progress_bar"
+        android:layout_toRightOf="@id/selectedImageUpload">
+
+
+        <EditText
+            android:gravity="start"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/button_shape"
+            android:fontFamily="@font/nixgonfonts_b"
+            android:hint="어떤 사진인가요?"
+            android:id="@+id/descriptionUpload"
+            android:textColor="@color/background"
+            android:textSize="18sp"
+            android:layout_marginVertical="10dp"
+            android:layout_marginHorizontal="10dp"
+            android:inputType="text|textNoSuggestions"
+            android:textColorHint="@color/navi"
+            android:textCursorDrawable="@drawable/cursor_color"
+            android:imeOptions="actionDone"
+
+            />
+
+    </RelativeLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/descRiptionContainer"
+        android:id="@+id/askLocation"
+        android:background="@drawable/top_line"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:weightSum="21">
+
+
+        <TextView
+            android:gravity="center_vertical"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="20"
+            android:background="@drawable/button_shape"
+            android:fontFamily="@font/nixgonfonts_b"
+            android:textSize="20sp"
+            android:id="@+id/where"
+            android:layout_marginVertical="3dp"
+
+            android:textColor="@color/background"
+            android:text="이곳이 어디인지 알려주세요"
+
+            />
+
+    </LinearLayout>
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/searchPlace"
+        android:gravity="bottom"
+        android:background="@drawable/bottom_line"
+        android:layout_below="@id/askLocation"
+        >
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/search"
+            android:id="@+id/searchIcon"
+
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            />
+
+        <EditText
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/searchBar"
+            android:background="@drawable/bottom_line"
+            android:layout_toRightOf="@id/searchIcon"
+            android:fontFamily="@font/nixgonfonts_b"
+            android:hint="이름 또는 시,도 "
+            android:textColor="@color/background"
+            android:textColorHint="@color/navi"
+            android:inputType="textNoSuggestions"
+            android:imeOptions="actionDone"
+
+            />
+
+
+
+
+
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/searchPlace"
+        android:id="@+id/searchRecycler"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+
+        />
+
+
+
+
+</RelativeLayout>

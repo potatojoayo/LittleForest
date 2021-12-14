@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    android:clickable="true"
+    android:weightSum="10"
+    android:id="@+id/plus_fragment_gallery"
+    tools:context=".plus.PlusGalleryActivity"
+    >
+
+    <LinearLayout
+        android:id="@+id/upperBar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+
+        android:orientation="horizontal"
+        android:weightSum="10"
+        android:gravity="center_vertical"
+        android:layout_weight="0.6"
+        >
+
+
+        <ImageView
+            android:id="@+id/ivX"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_weight="2.0"
+            android:src="@drawable/back_button"
+            />
+
+
+
+
+        <TextView
+
+            android:id="@+id/pickImage"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+
+            android:layout_weight="6.0"
+
+            android:gravity="center"
+            android:text="갤러리"
+            android:textSize="20sp"
+            android:fontFamily="@font/nixgonfonts_b"
+            android:textColor="@color/background"
+            android:background="@drawable/button_shape"
+
+            />
+
+        <TextView
+
+            android:id="@+id/pickVideo"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+
+            android:layout_weight="0.0"
+
+            android:gravity="center"
+            android:text=""
+            android:textSize="20sp"
+            android:background="@drawable/button_shape"
+            android:fontFamily="@font/nixgonfonts_b"
+            android:textColor="@color/background"
+            />
+
+
+
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="2.0"
+            android:gravity="center"
+            android:text="다음"
+            android:textSize="20sp"
+            android:id="@+id/plusNext"
+            android:fontFamily="@font/nixgonfonts_b"
+            android:textColor="@color/background"
+            android:paddingEnd="5dp"
+            />
+
+
+
+
+    </LinearLayout>
+
+
+    <com.sothree.slidinguppanel.SlidingUpPanelLayout
+        xmlns:sothree="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/sliding_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/upperBar"
+        android:gravity="top"
+        sothree:umanoPanelHeight="50dp"
+        sothree:umanoShadowHeight="0dp"
+        app:umanoDragView = "@id/selectedImage"
+        app:umanoScrollableView="@id/selectedImage"
+        android:layout_weight="9.4"
+
+        app:umanoOverlay="true"
+        app:umanoParallaxOffset="400dp">
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/galleryRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="ifContentScrolls"
+            android:scrollbars="vertical"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            tools:listitem="@layout/view_holder" />
+
+
+
+            <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+                android:orientation="vertical"
+        android:weightSum="25.1"
+
+
+                >
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:id="@+id/selectedImage"
+                    android:layout_weight="25"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.1"
+                    android:background="@color/white"
+                    />
+
+
+
+            </LinearLayout>
+
+
+
+
+
+    </com.sothree.slidinguppanel.SlidingUpPanelLayout>
+
+
+
+
+</LinearLayout>

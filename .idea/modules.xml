@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/BlueGreen.iml" filepath="$PROJECT_DIR$/.idea/BlueGreen.iml" group="BlueGreen" />
+      <module fileurl="file://$PROJECT_DIR$/naveridlogin_android_sdk_4.2.6/BlueGreen-naveridlogin_android_sdk_4.2.6.iml" filepath="$PROJECT_DIR$/naveridlogin_android_sdk_4.2.6/BlueGreen-naveridlogin_android_sdk_4.2.6.iml" group="BlueGreen/naveridlogin_android_sdk_4.2.6" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="BlueGreen/app" />
+      <module fileurl="file://$PROJECT_DIR$/naveridlogin_android_sdk_4.2.6/naveridlogin_android_sdk_4.2.6.iml" filepath="$PROJECT_DIR$/naveridlogin_android_sdk_4.2.6/naveridlogin_android_sdk_4.2.6.iml" group="BlueGreen/naveridlogin_android_sdk_4.2.6" />
+    </modules>
+  </component>
+</project>
